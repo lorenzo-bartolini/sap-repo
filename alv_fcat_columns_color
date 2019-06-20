@@ -1,0 +1,8 @@
+loop at lt_fcat into ls_fcat.
+  case ls_fcat-fieldname.
+    when 'EBELN' or 'YOUR_COLUMN_NAME'.
+      ls_fcat-emphasize = 'C300'. "color list image link: http://www.abap.es/Imagenes/ALV_colores2.png
+    when 'YOUR_COLUMN_NAME'.
+      ls_fcat-emphasize = 'OTHER_COLOR_CODE'.
+  endcase.
+endloop.
